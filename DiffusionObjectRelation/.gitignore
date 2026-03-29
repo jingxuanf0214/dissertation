@@ -1,0 +1,71 @@
+# --- LaTeX core auxiliary files ---
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
+
+# --- Bibliography ---
+*.bbl
+*.bcf
+*.blg
+*-blx.aux
+*.run.xml
+
+# --- Sync / build tools ---
+*.fdb_latexmk
+*.synctex
+*.synctex(busy)
+*.synctex.gz
+*.synctex.gz(busy)
+*.pdfsync
+
+# --- Intermediate output ---
+*.dvi
+*.xdv
+*-converted-to.*
+
+# --- Beamer / other common extras ---
+*.nav
+*.snm
+*.vrb
+
+# --- Glossaries / indices (if used) ---
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.glsdefs
+*.idx
+*.ilg
+*.ind
+*.ist
+*.lol
+
+# --- minted ---
+_minted*
+*.pyg
+
+# --- latexindent backup ---
+*.bak*
+
+# --- Prism / local build mirrors (optional sync artifacts) ---
+.prism/
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+
+# --- Editor backups ---
+*~
+*.swp
+*.swo

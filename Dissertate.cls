@@ -33,6 +33,7 @@
 
 % 
 \RequirePackage{color}
+\usepackage{xcolor}
 \usepackage{hyperref}
 \RequirePackage[tiny, md, sc]{titlesec}
 \setlength{\headheight}{15pt}
@@ -46,7 +47,72 @@
 \RequirePackage{packages/\Dissertate@School/style}
 
 \RequirePackage{graphicx}
+\usepackage{microtype}
+\usepackage{subcaption}
 \usepackage[most]{tcolorbox}
+\usepackage{listings}
+\usepackage{inconsolata}
+
+% --- Appendix B: Code listing style (from DiffusionObjectRelation/code_style.sty) ---
+\tcbuselibrary{listings}
+\tcbuselibrary{skins}
+
+\definecolor{lightindigo}{RGB}{220, 224, 255}
+% Atom One Light Inspired Color Palette
+\definecolor{atomBackground}{RGB}{250, 250, 250}      % Background: #FAFAFA
+\definecolor{atomForeground}{RGB}{40, 40, 40}        % Default Text: #282828
+\definecolor{atomKeyword}{RGB}{209, 72, 65}          % Keywords: #D14841
+\definecolor{atomComment}{RGB}{117, 117, 117}        % Comments: #757575
+\definecolor{atomString}{RGB}{42, 130, 218}          % Strings: #2A82DA
+\definecolor{atomFunction}{RGB}{88, 110, 117}        % Functions: #586E75
+\definecolor{atomNumber}{RGB}{255, 128, 0}           % Numbers: #FF8000
+\definecolor{atomType}{RGB}{72, 118, 255}            % Types: #4876FF
+\definecolor{atomOperator}{RGB}{40, 40, 40}          % Operators: Same as foreground
+\definecolor{atomVariable}{RGB}{118, 118, 118}       % Variables: #767676
+
+\lstdefinestyle{atomLight}{
+    backgroundcolor=\color{lightindigo},
+    basicstyle=\fontsize{9}{10}\selectfont\ttfamily\color{atomForeground},
+    keywordstyle=\color{atomKeyword}\bfseries,
+    commentstyle=\color{atomComment}\itshape,
+    stringstyle=\color{atomString},
+    identifierstyle=\color{atomFunction},
+    numberstyle=\tiny\color{gray},
+    numbers=none,
+    breaklines=true,
+    breakatwhitespace=true,
+    frame=none,
+    rulecolor=\color{atomBackground},
+    tabsize=1,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    captionpos=b,
+    language=Python,
+    morekeywords={self, cls, with, ...},
+    emph={print, def, return, self, with},
+    emphstyle=\color{atomType}\bfseries,
+    linewidth=0.99\linewidth,
+    columns=fullflexible
+}
+\lstset{style=atomLight}
+\lstset{mathescape}
+
+\newtcblisting{RoundedListing}[1][]{
+  listing engine=listings,
+  listing only,
+  enhanced,
+  arc=5pt,
+  boxrule=1pt,
+  colframe=atomBackground,
+  colback=lightindigo,
+  top=3pt, bottom=3pt, left=3pt, right=3pt,
+  listing options={
+    style=atomLight,
+    #1
+  }
+}
+% --- End Appendix B code listing style ---
 \usepackage{amsmath}
 \RequirePackage{amssymb}
 \RequirePackage{mathspec}
@@ -76,6 +142,7 @@
 \RequirePackage{setspace}
 \RequirePackage{packages/\Dissertate@School/fltpage2}
 \RequirePackage{booktabs}
+\RequirePackage{multirow}
 \RequirePackage[tight,nice]{units}
 \RequirePackage{verbatim}
 % tocdepth 2 gives \subsections (what I want)
@@ -84,6 +151,7 @@
 \RequirePackage{url}
 \usepackage[titles]{tocloft}
 \usepackage[normalem]{ulem}
+\usepackage{csquotes}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \renewcommand{\cftchapfont}{\normalsize \scshape}
 % \usepackage{fixltx2e}
@@ -135,18 +203,21 @@
 %\setromanfont[Numbers=OldStyle, Ligatures={Common, TeX}, Scale=1.0]{EB Garamond}
 
 %\setsansfont[Scale=MatchLowercase, BoldFont={Lato Bold}]{Lato Regular}
-\setmonofont[Scale=MatchLowercase]{Noto Mono} % Font substitution for Source Code Pro
+\setmonofont[Scale=MatchLowercase]{Noto Sans Mono} % Font substitution for Source Code Pro
 
 %-----CAPTION CONFIG------------------------------------------------------------
 % Set the font optins for the caption changes:
 % sf to rm (sans to roman), footnotesize to small, singlespacing to onehalfspacing
 \RequirePackage[labelfont={bf,rm,small,onehalfspacing},
 								textfont={rm,small,singlespacing},
-								justification={justified,RaggedRight},
+								justification=RaggedRight,
 								singlelinecheck=false,
 								margin=0pt,
 								figurewithin=chapter,
 								tablewithin=chapter]{caption}
+
+% cleveref must be loaded after hyperref and caption
+\usepackage[capitalize]{cleveref}
 
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
 \doublespacing

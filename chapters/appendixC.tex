@@ -10,7 +10,7 @@
 
 \begin{figure*}[h]
   \centering
-  \resizebox{0.7\textwidth}{!}{\includegraphics{figures/chapter2_fig01.png}}
+  \resizebox{0.7\textwidth}{!}{\includegraphics{figures/appendixc_fig01.png}}
   \caption{A schematic summary of the results. First row: autoregressive LLM requires paraphrases to generalize knowledge from the fine-tuning text to QA tasks, and suffers from reversal curse (i.e. fail to answer backward questions). Second row: masked diffusion LLM can easily generalize fine-tuning text to QA tasks in both forward and backward styles. Third row: Inspired by the masked diffusion LLM, we propose a masked fine-tuning paradigm that closes the fine-tuning gap between autoregressive LLMs and masked diffusion LLMs.}
   \label{fig:diagram}
 \end{figure*}
@@ -205,7 +205,7 @@ These results suggest that, in arLLM fine-tuning, paraphrases significantly impr
 
 \begin{figure*}[t]
   \centering
-  \includegraphics[width=0.65\linewidth]{figures/chapter2_fig02.png}
+  \includegraphics[width=0.65\linewidth]{figures/appendixc_fig02.png}
   \caption{Training dynamics of arLLM (Llama 8B), dLLM (Llada), and masked arLLM (Llama 8B). For the NameDescription dataset, forward and backward accuracy are the average of N2D and D2N types. Paraphrases used in the Wiki dataset are the same-order paraphrases set. Due to the randomness of sampling the masks, we average across 4 random seeds for the dLLM and masked arLLM on NameDescription and Biography Datasets. Curves for each seed are shown in Appendix Figure \ref{fig:seed_dllm}-\ref{fig:seed_ar}.}
   \label{fig:main}
 \end{figure*}
@@ -222,7 +222,7 @@ One may expect that fine-tuning dLLM converges slower than arLLM, because learni
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\linewidth]{figures/chapter2_fig03.png}
+\includegraphics[width=0.7\linewidth]{figures/appendixc_fig03.png}
 \caption{An example of masked fine-tuning prompt. A random selection of tokens is replaced by [MASK] token. Highlighted tokens are used to compute the autoregressive loss.}
 \label{box}
 \end{figure}
@@ -250,7 +250,7 @@ To confirm that the effectiveness of our masked fine-tuning stems from the objec
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.5\textwidth]{figures/chapter2_fig04.png}
+  \includegraphics[width=0.5\textwidth]{figures/appendixc_fig04.png}
   \caption{Accuracy of using fixed mask ratio ($t$) in dLLM fine-tuning and arLLM masked fine-tuning on the NameDescription dataset.}
   \label{fig:fix_t}
   \vskip -0.2in
@@ -688,56 +688,56 @@ For reporting accuracy numbers in the main Tables, we first plot the total accur
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.75\linewidth]{figures/chapter2_fig05.png}
+  \includegraphics[width=0.75\linewidth]{figures/appendixc_fig05.png}
   \caption{Learning rate sweep of Llama-3.1-8B-instruct. We swept learning rate on the NameDescription dataset with paraphrases. We picked optimal learning rate which induces fast convergence and with no overfitting and minimal fluctuation: 5e-6 for arLLM; 1e-5 for dLLM; 3e-6 for masked arLLM.}
   \label{fig:lr_sweep}
 \end{figure}
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.75\linewidth]{figures/chapter2_fig06.png}
+  \includegraphics[width=0.75\linewidth]{figures/appendixc_fig06.png}
   \caption{Total accuracy (macro average of forward and backward accuracy) of experiments on Llama-3.1-8B-Instruct. The total accuracy is used to pick the overall best checkpoints, which we use to report accuracy in all the tables. }
   \label{fig:total_acc}
 \end{figure}
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.75\linewidth]{figures/chapter2_fig07.png}
+  \includegraphics[width=0.75\linewidth]{figures/appendixc_fig07.png}
   \caption{Learning dynamics of Llama-3.2-3B-Instruct.}
   \label{fig:llama4b}
 \end{figure}
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.75\linewidth]{figures/chapter2_fig08.png}
+  \includegraphics[width=0.75\linewidth]{figures/appendixc_fig08.png}
   \caption{Learning dynamics of Qwen/Qwen2.5-7B-Instruct.}
   \label{fig:qwen7b}
 \end{figure}
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.75\linewidth]{figures/chapter2_fig09.png}
+  \includegraphics[width=0.75\linewidth]{figures/appendixc_fig09.png}
   \caption{Learning dynamics of Qwen/Qwen3-4B-Instruct-2507.}
   \label{fig:qwen3b}
 \end{figure}
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.6\linewidth]{figures/chapter2_fig10.png}
+  \includegraphics[width=0.6\linewidth]{figures/appendixc_fig10.png}
   \caption{Random seed effects in Llada. Random seed determines the sampling of mask ratio and masked tokens. Each line represent a random seed.}
   \label{fig:seed_dllm}
 \end{figure}
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.6\linewidth]{figures/chapter2_fig11.png}
+  \includegraphics[width=0.6\linewidth]{figures/appendixc_fig11.png}
   \caption{Random seed effects in maksed Llama3.1 8B. Random seed determines the sampling of mask ratio and masked tokens. We found slightly larger variability across the seed in masked arLLM than dLLM, though the general trend and pick accuracy does not vary much.}
   \label{fig:seed_ar}
 \end{figure}
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.75\linewidth]{figures/chapter2_fig12.png}
+  \includegraphics[width=0.75\linewidth]{figures/appendixc_fig12.png}
   \caption{To verify the advantage of masked fine-tuning of arLLMs is not simply due ``data augmentation'' (i.e. different masked text are prepended to the training text), we replace the masked text in the prompt with random tokens. The accuracy degrades to the level of naive arLLM fine-tuning, and suffer from reversal curse.}
   \label{fig:random_augmentation}
 \end{figure}
@@ -772,7 +772,7 @@ Masked arLLM wo paraphrases& 0.799 & 0.0068 & 0.911 & 0.0032 & 0.957 & 0.0009 & 
 In Section \ref{sec:sft}, we proposed a Masked SFT method that turns any SFT prompt-response sequence into a demasking task. Specifically, the constructed demasking task sequence contains the question and masked answer in the user prompt, and full answer in the assistant response. For example, a data entry in the GSM8K dataset is: \textbf{Question}:
 Joy can read 8 pages of a book in 20 minutes. How many hours will it take her to read 120 pages? \textbf{Answer}: In one hour, there are 3 sets of 20 minutes. So, Joy can read 8 x 3 = <<8*3=24>>24 pages in an hour. It will take her 120/24 = <<120/24=5>>5 hours to read 120 pages. 5. After generating a random mask, the constructed masked SFT sequence is: 
 
-\includegraphics[width=1\linewidth]{figures/chapter2_fig12.png}
+\includegraphics[width=1\linewidth]{figures/appendixc_fig12.png}
 
 
 
@@ -785,26 +785,26 @@ Most of the training configurations are the same as those in the main experiment
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.7\linewidth]{figures/chapter2_fig14.png}
+  \includegraphics[width=0.7\linewidth]{figures/appendixc_fig14.png}
   \caption{Learning rate and epoch sweep of Llama-3.2-3B-Instruct on GSM8K dataset.}
   \label{apx:llama3b_gsm8k}
 \end{figure}
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.7\linewidth]{figures/chapter2_fig15.png}
+  \includegraphics[width=0.7\linewidth]{figures/appendixc_fig15.png}
   \caption{Learning rate and epoch sweep of Qwen3-4B-Instruct-2507 on GSM8K dataset.}
 \end{figure}
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.7\linewidth]{figures/chapter2_fig16.png}
+  \includegraphics[width=0.7\linewidth]{figures/appendixc_fig16.png}
   \caption{Learning rate and epoch sweep of Llama-3.2-3B-Instruct on MATH dataset.}
 \end{figure}
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.7\linewidth]{figures/chapter2_fig17.png}
+  \includegraphics[width=0.7\linewidth]{figures/appendixc_fig17.png}
   \caption{Learning rate and epoch sweep of Qwen3-4B-Instruct-2507 on MATH dataset.}
   \label{apx:qwen4b_math}
 \end{figure}

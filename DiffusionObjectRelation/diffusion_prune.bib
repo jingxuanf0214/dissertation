@@ -1,0 +1,805 @@
+@misc{Albergo2023Stochastic,
+  title = {Stochastic {{Interpolants}}: {{A Unifying Framework}} for {{Flows}} and {{Diffusions}}},
+  shorttitle = {Stochastic {{Interpolants}}},
+  author = {Albergo, Michael S. and Boffi, Nicholas M. and {Vanden-Eijnden}, Eric},
+  year = {2023},
+  month = nov,
+  number = {arXiv:2303.08797},
+  eprint = {2303.08797},
+  primaryclass = {cs},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2303.08797},
+  urldate = {2025-07-22},
+  abstract = {A class of generative models that unifies flow-based and diffusion-based methods is introduced. These models extend the framework proposed in Albergo \& Vanden-Eijnden (2023), enabling the use of a broad class of continuous-time stochastic processes called `stochastic interpolants' to bridge any two arbitrary probability density functions exactly in finite time. These interpolants are built by combining data from the two prescribed densities with an additional latent variable that shapes the bridge in a flexible way. The time-dependent probability density function of the stochastic interpolant is shown to satisfy a first-order transport equation as well as a family of forward and backward Fokker-Planck equations with tunable diffusion coefficient. Upon consideration of the time evolution of an individual sample, this viewpoint immediately leads to both deterministic and stochastic generative models based on probability flow equations or stochastic differential equations with an adjustable level of noise. The drift coefficients entering these models are time-dependent velocity fields characterized as the unique minimizers of simple quadratic objective functions, one of which is a new objective for the score of the interpolant density. We show that minimization of these quadratic objectives leads to control of the likelihood for generative models built upon stochastic dynamics, while likelihood control for deterministic dynamics is more stringent. We also discuss connections with other methods such as score-based diffusion models, stochastic localization processes, probabilistic denoising techniques, and rectifying flows. In addition, we demonstrate that stochastic interpolants recover the Schr{\textbackslash}"odinger bridge between the two target densities when explicitly optimizing over the interpolant. Finally, algorithmic aspects are discussed and the approach is illustrated on numerical examples.},
+  archiveprefix = {arXiv},
+  keywords = {Computer Science - Machine Learning,Condensed Matter - Disordered Systems and Neural Networks,Mathematics - Probability},
+  file = {/Users/binxuwang/Zotero/storage/BIBKQIQD/2303.html}
+}
+
+@inproceedings{Blattmann_2023_CVPR,
+  title = {Align Your Latents: {{High-resolution}} Video Synthesis with Latent Diffusion Models},
+  booktitle = {Proceedings of the {{IEEE}}/{{CVF}} Conference on Computer Vision and Pattern Recognition ({{CVPR}})},
+  author = {Blattmann, Andreas and Rombach, Robin and Ling, Huan and Dockhorn, Tim and Kim, Seung Wook and Fidler, Sanja and Kreis, Karsten},
+  year = {2023},
+  month = jun,
+  pages = {22563--22575}
+}
+
+@misc{Chen2023PixArtAlpha,
+  title = {{{PixArt-}}\${$\alpha\$$}: {{Fast Training}} of {{Diffusion Transformer}} for {{Photorealistic Text-to-Image Synthesis}}},
+  shorttitle = {{{PixArt-}}\${$\alpha\$$}},
+  author = {Chen, Junsong and Yu, Jincheng and Ge, Chongjian and Yao, Lewei and Xie, Enze and Wu, Yue and Wang, Zhongdao and Kwok, James and Luo, Ping and Lu, Huchuan and Li, Zhenguo},
+  year = {2023},
+  month = dec,
+  number = {arXiv:2310.00426},
+  eprint = {2310.00426},
+  primaryclass = {cs},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2310.00426},
+  urldate = {2025-07-22},
+  abstract = {The most advanced text-to-image (T2I) models require significant training costs (e.g., millions of GPU hours), seriously hindering the fundamental innovation for the AIGC community while increasing CO2 emissions. This paper introduces PIXART-\${\textbackslash}alpha\$, a Transformer-based T2I diffusion model whose image generation quality is competitive with state-of-the-art image generators (e.g., Imagen, SDXL, and even Midjourney), reaching near-commercial application standards. Additionally, it supports high-resolution image synthesis up to 1024px resolution with low training cost, as shown in Figure 1 and 2. To achieve this goal, three core designs are proposed: (1) Training strategy decomposition: We devise three distinct training steps that separately optimize pixel dependency, text-image alignment, and image aesthetic quality; (2) Efficient T2I Transformer: We incorporate cross-attention modules into Diffusion Transformer (DiT) to inject text conditions and streamline the computation-intensive class-condition branch; (3) High-informative data: We emphasize the significance of concept density in text-image pairs and leverage a large Vision-Language model to auto-label dense pseudo-captions to assist text-image alignment learning. As a result, PIXART-\${\textbackslash}alpha\$'s training speed markedly surpasses existing large-scale T2I models, e.g., PIXART-\${\textbackslash}alpha\$ only takes 10.8\% of Stable Diffusion v1.5's training time (675 vs. 6,250 A100 GPU days), saving nearly {\textbackslash}\$300,000 ({\textbackslash}\$26,000 vs. {\textbackslash}\$320,000) and reducing 90\% CO2 emissions. Moreover, compared with a larger SOTA model, RAPHAEL, our training cost is merely 1\%. Extensive experiments demonstrate that PIXART-\${\textbackslash}alpha\$ excels in image quality, artistry, and semantic control. We hope PIXART-\${\textbackslash}alpha\$ will provide new insights to the AIGC community and startups to accelerate building their own high-quality yet low-cost generative models from scratch.},
+  archiveprefix = {arXiv},
+  keywords = {Computer Science - Computer Vision and Pattern Recognition},
+  file = {/Users/binxuwang/Zotero/storage/NX2XDXKN/2310.html}
+}
+
+@inproceedings{chen2023sampling,
+  title = {Sampling Is as Easy as Learning the Score: Theory for Diffusion Models with Minimal Data Assumptions},
+  booktitle = {The Eleventh International Conference on Learning Representations},
+  author = {Chen, Sitan and Chewi, Sinho and Li, Jerry and Li, Yuanzhi and Salim, Adil and Zhang, Anru},
+  year = {2023}
+}
+
+@article{chen2024deconstructing,
+  title = {Deconstructing Denoising Diffusion Models for Self-Supervised Learning},
+  author = {Chen, Xinlei and Liu, Zhuang and Xie, Saining and He, Kaiming},
+  year = {2024},
+  journal = {arXiv preprint arXiv:2401.14404},
+  eprint = {2401.14404},
+  archiveprefix = {arXiv}
+}
+
+@inproceedings{choi2020starganv2,
+  title = {Stargan v2: {{Diverse}} Image Synthesis for Multiple Domains},
+  booktitle = {Proceedings of the {{IEEE}}/{{CVF}} Conference on Computer Vision and Pattern Recognition},
+  author = {Choi, Yunjey and Uh, Youngjung and Yoo, Jaejun and Ha, Jung-Woo},
+  year = {2020},
+  pages = {8188--8197}
+}
+
+@misc{Conwell2022Testing,
+  title = {Testing {{Relational Understanding}} in {{Text-Guided Image Generation}}},
+  author = {Conwell, Colin and Ullman, Tomer},
+  year = {2022},
+  month = jul,
+  number = {arXiv:2208.00005},
+  eprint = {2208.00005},
+  primaryclass = {cs},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2208.00005},
+  urldate = {2025-07-22},
+  abstract = {Relations are basic building blocks of human cognition. Classic and recent work suggests that many relations are early developing, and quickly perceived. Machine models that aspire to human-level perception and reasoning should reflect the ability to recognize and reason generatively about relations. We report a systematic empirical examination of a recent text-guided image generation model (DALL-E 2), using a set of 15 basic physical and social relations studied or proposed in the literature, and judgements from human participants (N = 169). Overall, we find that only {\textasciitilde}22\% of images matched basic relation prompts. Based on a quantitative examination of people's judgments, we suggest that current image generation models do not yet have a grasp of even basic relations involving simple objects and agents. We examine reasons for model successes and failures, and suggest possible improvements based on computations observed in biological intelligence.},
+  archiveprefix = {arXiv},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computer Vision and Pattern Recognition,Computer Science - Machine Learning},
+  file = {/Users/binxuwang/Zotero/storage/Y882G84B/2208.html}
+}
+
+@article{gatmiry2024learningMOG,
+  title = {Learning Mixtures of Gaussians Using Diffusion Models},
+  author = {Gatmiry, Khashayar and Kelner, Jonathan and Lee, Holden},
+  year = {2024},
+  journal = {arXiv preprint arXiv:2404.18869},
+  eprint = {2404.18869},
+  archiveprefix = {arXiv}
+}
+
+@article{ho2020DDPM,
+  title = {Denoising Diffusion Probabilistic Models},
+  author = {Ho, Jonathan and Jain, Ajay and Abbeel, Pieter},
+  year = {2020},
+  journal = {Advances in Neural Information Processing Systems},
+  volume = {33},
+  pages = {6840--6851}
+}
+
+@article{ho2022classifierFreeGuidance,
+  title = {Classifier-Free Diffusion Guidance},
+  author = {Ho, Jonathan and Salimans, Tim},
+  year = {2022},
+  journal = {arXiv preprint arXiv:2207.12598},
+  eprint = {2207.12598},
+  archiveprefix = {arXiv}
+}
+
+@inproceedings{Ho2022video,
+  title = {Video Diffusion Models},
+  booktitle = {Advances in Neural Information Processing Systems},
+  author = {Ho, Jonathan and Salimans, Tim and Gritsenko, Alexey and Chan, William and Norouzi, Mohammad and Fleet, David J},
+  editor = {Koyejo, S. and Mohamed, S. and Agarwal, A. and Belgrave, D. and Cho, K. and Oh, A.},
+  year = {2022},
+  volume = {35},
+  pages = {8633--8646},
+  publisher = {Curran Associates, Inc.}
+}
+
+@article{hyvarinen2005,
+  title = {Estimation of Non-Normalized Statistical Models by Score Matching},
+  author = {Hyv{\"a}rinen, Aapo},
+  year = {2005},
+  month = dec,
+  journal = {Journal of Machine Learning Research},
+  volume = {6},
+  pages = {695--709},
+  publisher = {JMLR.org},
+  issn = {1532-4435},
+  abstract = {One often wants to estimate statistical models where the probability density function is known only up to a multiplicative normalization constant. Typically, one then has to resort to Markov Chain Monte Carlo methods, or approximations of the normalization constant. Here, we propose that such models can be estimated by minimizing the expected squared distance between the gradient of the log-density given by the model and the gradient of the log-density of the observed data. While the estimation of the gradient of log-density function is, in principle, a very difficult non-parametric problem, we prove a surprising result that gives a simple formula for this objective function. The density function of the observed data does not appear in this formula, which simplifies to a sample average of a sum of some derivatives of the log-density given by the model. The validity of the method is demonstrated on multivariate Gaussian and independent component analysis models, and by estimating an overcomplete filter set for natural image data.},
+  issue_date = {12/1/2005}
+}
+
+@misc{Karras2024EDM2Analyzing,
+  title = {Analyzing and {{Improving}} the {{Training Dynamics}} of {{Diffusion Models}}},
+  author = {Karras, Tero and Aittala, Miika and Lehtinen, Jaakko and Hellsten, Janne and Aila, Timo and Laine, Samuli},
+  year = {2024},
+  month = mar,
+  number = {arXiv:2312.02696},
+  eprint = {2312.02696},
+  primaryclass = {cs},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2312.02696},
+  urldate = {2025-07-22},
+  abstract = {Diffusion models currently dominate the field of data-driven image synthesis with their unparalleled scaling to large datasets. In this paper, we identify and rectify several causes for uneven and ineffective training in the popular ADM diffusion model architecture, without altering its high-level structure. Observing uncontrolled magnitude changes and imbalances in both the network activations and weights over the course of training, we redesign the network layers to preserve activation, weight, and update magnitudes on expectation. We find that systematic application of this philosophy eliminates the observed drifts and imbalances, resulting in considerably better networks at equal computational complexity. Our modifications improve the previous record FID of 2.41 in ImageNet-512 synthesis to 1.81, achieved using fast deterministic sampling. As an independent contribution, we present a method for setting the exponential moving average (EMA) parameters post-hoc, i.e., after completing the training run. This allows precise tuning of EMA length without the cost of performing several training runs, and reveals its surprising interactions with network architecture, training time, and guidance.},
+  archiveprefix = {arXiv},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computer Vision and Pattern Recognition,Computer Science - Machine Learning,Computer Science - Neural and Evolutionary Computing,Statistics - Machine Learning},
+  file = {/Users/binxuwang/Zotero/storage/873NVM4J/2312.html}
+}
+
+@inproceedings{kong2021diffwave,
+  title = {{{DiffWave}}: A Versatile Diffusion Model for Audio Synthesis},
+  booktitle = {International Conference on Learning Representations},
+  author = {Kong, Zhifeng and Ping, Wei and Huang, Jiaji and Zhao, Kexin and Catanzaro, Bryan},
+  year = {2021}
+}
+
+@article{lee2021priorgrad,
+  title = {{{PriorGrad}}: {{Improving}} Conditional Denoising Diffusion Models with Data-Dependent Adaptive Prior},
+  author = {Lee, Sang-gil and Kim, Heeseung and Shin, Chaehun and Tan, Xu and Liu, Chang and Meng, Qi and Qin, Tao and Chen, Wei and Yoon, Sungroh and Liu, Tie-Yan},
+  year = {2021},
+  journal = {arXiv preprint arXiv:2106.06406},
+  eprint = {2106.06406},
+  archiveprefix = {arXiv}
+}
+
+@article{liu2022PNDM,
+  title = {Pseudo Numerical Methods for Diffusion Models on Manifolds},
+  author = {Liu, Luping and Ren, Yi and Lin, Zhijie and Zhao, Zhou},
+  year = {2022},
+  journal = {arXiv preprint arXiv:2202.09778},
+  eprint = {2202.09778},
+  archiveprefix = {arXiv}
+}
+
+@article{lu2022dpm++,
+  title = {Dpm-Solver++: {{Fast}} Solver for Guided Sampling of Diffusion Probabilistic Models},
+  author = {Lu, Cheng and Zhou, Yuhao and Bao, Fan and Chen, Jianfei and Li, Chongxuan and Zhu, Jun},
+  year = {2022},
+  journal = {arXiv preprint arXiv:2211.01095},
+  eprint = {2211.01095},
+  archiveprefix = {arXiv}
+}
+
+@article{lu2022dpmsolver,
+  title = {Dpm-Solver: {{A}} Fast Ode Solver for Diffusion Probabilistic Model Sampling in around 10 Steps},
+  author = {Lu, Cheng and Zhou, Yuhao and Bao, Fan and Chen, Jianfei and Li, Chongxuan and Zhu, Jun},
+  year = {2022},
+  journal = {Advances in Neural Information Processing Systems},
+  volume = {35},
+  pages = {5775--5787}
+}
+
+@misc{Ma2024SiT,
+  title = {{{SiT}}: {{Exploring Flow}} and {{Diffusion-based Generative Models}} with {{Scalable Interpolant Transformers}}},
+  shorttitle = {{{SiT}}},
+  author = {Ma, Nanye and Goldstein, Mark and Albergo, Michael S. and Boffi, Nicholas M. and {Vanden-Eijnden}, Eric and Xie, Saining},
+  year = {2024},
+  month = sep,
+  number = {arXiv:2401.08740},
+  eprint = {2401.08740},
+  primaryclass = {cs},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2401.08740},
+  urldate = {2025-07-22},
+  abstract = {We present Scalable Interpolant Transformers (SiT), a family of generative models built on the backbone of Diffusion Transformers (DiT). The interpolant framework, which allows for connecting two distributions in a more flexible way than standard diffusion models, makes possible a modular study of various design choices impacting generative models built on dynamical transport: learning in discrete or continuous time, the objective function, the interpolant that connects the distributions, and deterministic or stochastic sampling. By carefully introducing the above ingredients, SiT surpasses DiT uniformly across model sizes on the conditional ImageNet 256x256 and 512x512 benchmark using the exact same model structure, number of parameters, and GFLOPs. By exploring various diffusion coefficients, which can be tuned separately from learning, SiT achieves an FID-50K score of 2.06 and 2.62, respectively.},
+  archiveprefix = {arXiv},
+  keywords = {Computer Science - Computer Vision and Pattern Recognition,Computer Science - Machine Learning},
+  file = {/Users/binxuwang/Zotero/storage/NI28EHUD/2401.html}
+}
+
+@misc{Okawa2024Compositional,
+  title = {Compositional {{Abilities Emerge Multiplicatively}}: {{Exploring Diffusion Models}} on a {{Synthetic Task}}},
+  shorttitle = {Compositional {{Abilities Emerge Multiplicatively}}},
+  author = {Okawa, Maya and Lubana, Ekdeep Singh and Dick, Robert P. and Tanaka, Hidenori},
+  year = {2024},
+  month = feb,
+  number = {arXiv:2310.09336},
+  eprint = {2310.09336},
+  primaryclass = {cs},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2310.09336},
+  urldate = {2025-07-22},
+  abstract = {Modern generative models exhibit unprecedented capabilities to generate extremely realistic data. However, given the inherent compositionality of the real world, reliable use of these models in practical applications requires that they exhibit the capability to compose a novel set of concepts to generate outputs not seen in the training data set. Prior work demonstrates that recent diffusion models do exhibit intriguing compositional generalization abilities, but also fail unpredictably. Motivated by this, we perform a controlled study for understanding compositional generalization in conditional diffusion models in a synthetic setting, varying different attributes of the training data and measuring the model's ability to generate samples out-of-distribution. Our results show: (i) the order in which the ability to generate samples from a concept and compose them emerges is governed by the structure of the underlying data-generating process; (ii) performance on compositional tasks exhibits a sudden "emergence" due to multiplicative reliance on the performance of constituent tasks, partially explaining emergent phenomena seen in generative models; and (iii) composing concepts with lower frequency in the training data to generate out-of-distribution samples requires considerably more optimization steps compared to generating in-distribution samples. Overall, our study lays a foundation for understanding capabilities and compositionality in generative models from a data-centric perspective.},
+  archiveprefix = {arXiv},
+  keywords = {Computer Science - Machine Learning,diffusion,interpretability},
+  file = {/Users/binxuwang/Zotero/storage/M3XRE9UJ/2310.html}
+}
+
+@misc{Park2024Emergence,
+  title = {Emergence of {{Hidden Capabilities}}: {{Exploring Learning Dynamics}} in {{Concept Space}}},
+  shorttitle = {Emergence of {{Hidden Capabilities}}},
+  author = {Park, Core Francisco and Okawa, Maya and Lee, Andrew and Tanaka, Hidenori and Lubana, Ekdeep Singh},
+  year = {2024},
+  month = dec,
+  number = {arXiv:2406.19370},
+  eprint = {2406.19370},
+  primaryclass = {cs},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2406.19370},
+  urldate = {2025-07-22},
+  abstract = {Modern generative models demonstrate impressive capabilities, likely stemming from an ability to identify and manipulate abstract concepts underlying their training data. However, fundamental questions remain: what determines the concepts a model learns, the order in which it learns them, and its ability to manipulate those concepts? To address these questions, we propose analyzing a model's learning dynamics via a framework we call the concept space, where each axis represents an independent concept underlying the data generating process. By characterizing learning dynamics in this space, we identify how the speed at which a concept is learned, and hence the order of concept learning, is controlled by properties of the data we term concept signal. Further, we observe moments of sudden turns in the direction of a model's learning dynamics in concept space. Surprisingly, these points precisely correspond to the emergence of hidden capabilities, i.e., where latent interventions show the model possesses the capability to manipulate a concept, but these capabilities cannot yet be elicited via naive input prompting. While our results focus on synthetically defined toy datasets, we hypothesize a general claim on emergence of hidden capabilities may hold: generative models possess latent capabilities that emerge suddenly and consistently during training, though a model might not exhibit these capabilities under naive input prompting.},
+  archiveprefix = {arXiv},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Machine Learning,diffusion,interpretability},
+  file = {/Users/binxuwang/Zotero/storage/6G2B2B2P/2406.html}
+}
+
+@misc{Peebles2023Scalable,
+  title = {Scalable {{Diffusion Models}} with {{Transformers}}},
+  author = {Peebles, William and Xie, Saining},
+  year = {2023},
+  month = mar,
+  number = {arXiv:2212.09748},
+  eprint = {2212.09748},
+  primaryclass = {cs},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2212.09748},
+  urldate = {2025-07-22},
+  abstract = {We explore a new class of diffusion models based on the transformer architecture. We train latent diffusion models of images, replacing the commonly-used U-Net backbone with a transformer that operates on latent patches. We analyze the scalability of our Diffusion Transformers (DiTs) through the lens of forward pass complexity as measured by Gflops. We find that DiTs with higher Gflops -- through increased transformer depth/width or increased number of input tokens -- consistently have lower FID. In addition to possessing good scalability properties, our largest DiT-XL/2 models outperform all prior diffusion models on the class-conditional ImageNet 512x512 and 256x256 benchmarks, achieving a state-of-the-art FID of 2.27 on the latter.},
+  archiveprefix = {arXiv},
+  keywords = {Computer Science - Computer Vision and Pattern Recognition,Computer Science - Machine Learning},
+  file = {/Users/binxuwang/Zotero/storage/XUP4CXI4/2212.html}
+}
+
+@article{pfgm2023,
+  title = {{{PFGM}}++: {{Unlocking}} the Potential of Physics-Inspired Generative Models},
+  author = {Xu, Yilun and Liu, Ziming and Tian, Yonglong and Tong, Shangyuan and Tegmark, Max and Jaakkola, Tommi},
+  year = {2023},
+  month = feb,
+  journal = {arXiv e-prints},
+  number = {arXiv:2302.04265},
+  eprint = {2302.04265},
+  primaryclass = {cs.LG},
+  pages = {arXiv:2302.04265},
+  doi = {10.48550/arXiv.2302.04265},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System},
+  archiveprefix = {arXiv},
+  keywords = {Computer Science - Computer Vision and Pattern Recognition,Computer Science - Machine Learning}
+}
+
+@article{pierret2024diffusion4Gaussian,
+  title = {Diffusion Models for {{Gaussian}} Distributions: {{Exact}} Solutions and {{Wasserstein}} Errors},
+  author = {Pierret, Emile and Galerne, Bruno},
+  year = {2024},
+  journal = {arXiv preprint arXiv:2405.14250},
+  eprint = {2405.14250},
+  archiveprefix = {arXiv}
+}
+
+@misc{Raffel2023T5Model,
+  title = {Exploring the {{Limits}} of {{Transfer Learning}} with a {{Unified Text-to-Text Transformer}}},
+  author = {Raffel, Colin and Shazeer, Noam and Roberts, Adam and Lee, Katherine and Narang, Sharan and Matena, Michael and Zhou, Yanqi and Li, Wei and Liu, Peter J.},
+  year = {2023},
+  month = sep,
+  number = {arXiv:1910.10683},
+  eprint = {1910.10683},
+  primaryclass = {cs},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.1910.10683},
+  urldate = {2025-07-22},
+  abstract = {Transfer learning, where a model is first pre-trained on a data-rich task before being fine-tuned on a downstream task, has emerged as a powerful technique in natural language processing (NLP). The effectiveness of transfer learning has given rise to a diversity of approaches, methodology, and practice. In this paper, we explore the landscape of transfer learning techniques for NLP by introducing a unified framework that converts all text-based language problems into a text-to-text format. Our systematic study compares pre-training objectives, architectures, unlabeled data sets, transfer approaches, and other factors on dozens of language understanding tasks. By combining the insights from our exploration with scale and our new ``Colossal Clean Crawled Corpus'', we achieve state-of-the-art results on many benchmarks covering summarization, question answering, text classification, and more. To facilitate future work on transfer learning for NLP, we release our data set, pre-trained models, and code.},
+  archiveprefix = {arXiv},
+  keywords = {Computer Science - Computation and Language,Computer Science - Machine Learning,Statistics - Machine Learning},
+  file = {/Users/binxuwang/Zotero/storage/SS5EWWJB/1910.html}
+}
+
+@inproceedings{rombach2022latentdiff,
+  title = {High-Resolution Image Synthesis with Latent Diffusion Models},
+  booktitle = {Proceedings of the {{IEEE}}/{{CVF}} Conference on Computer Vision and Pattern Recognition},
+  author = {Rombach, Robin and Blattmann, Andreas and Lorenz, Dominik and Esser, Patrick and Ommer, Bj{\"o}rn},
+  year = {2022},
+  pages = {10684--10695}
+}
+
+@misc{Rombach2022LatentDiffusion,
+  title = {High-{{Resolution Image Synthesis}} with {{Latent Diffusion Models}}},
+  author = {Rombach, Robin and Blattmann, Andreas and Lorenz, Dominik and Esser, Patrick and Ommer, Bj{\"o}rn},
+  year = {2022},
+  month = apr,
+  number = {arXiv:2112.10752},
+  eprint = {2112.10752},
+  primaryclass = {cs},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2112.10752},
+  urldate = {2025-07-22},
+  abstract = {By decomposing the image formation process into a sequential application of denoising autoencoders, diffusion models (DMs) achieve state-of-the-art synthesis results on image data and beyond. Additionally, their formulation allows for a guiding mechanism to control the image generation process without retraining. However, since these models typically operate directly in pixel space, optimization of powerful DMs often consumes hundreds of GPU days and inference is expensive due to sequential evaluations. To enable DM training on limited computational resources while retaining their quality and flexibility, we apply them in the latent space of powerful pretrained autoencoders. In contrast to previous work, training diffusion models on such a representation allows for the first time to reach a near-optimal point between complexity reduction and detail preservation, greatly boosting visual fidelity. By introducing cross-attention layers into the model architecture, we turn diffusion models into powerful and flexible generators for general conditioning inputs such as text or bounding boxes and high-resolution synthesis becomes possible in a convolutional manner. Our latent diffusion models (LDMs) achieve a new state of the art for image inpainting and highly competitive performance on various tasks, including unconditional image generation, semantic scene synthesis, and super-resolution, while significantly reducing computational requirements compared to pixel-based DMs. Code is available at https://github.com/CompVis/latent-diffusion .},
+  archiveprefix = {arXiv},
+  keywords = {Computer Science - Computer Vision and Pattern Recognition},
+  file = {/Users/binxuwang/Zotero/storage/8BGAA84G/2112.html}
+}
+
+@inproceedings{rombach2022ldmSD,
+  title = {High-Resolution Image Synthesis with Latent Diffusion Models},
+  booktitle = {Proceedings of the {{IEEE}}/{{CVF}} Conference on Computer Vision and Pattern Recognition},
+  author = {Rombach, Robin and Blattmann, Andreas and Lorenz, Dominik and Esser, Patrick and Ommer, Bj{\"o}rn},
+  year = {2022},
+  pages = {10684--10695}
+}
+
+@misc{Saharia2022ImageN_T5,
+  title = {Photorealistic {{Text-to-Image Diffusion Models}} with {{Deep Language Understanding}}},
+  author = {Saharia, Chitwan and Chan, William and Saxena, Saurabh and Li, Lala and Whang, Jay and Denton, Emily and Ghasemipour, Seyed Kamyar Seyed and Ayan, Burcu Karagol and Mahdavi, S. Sara and Lopes, Rapha Gontijo and Salimans, Tim and Ho, Jonathan and Fleet, David J. and Norouzi, Mohammad},
+  year = {2022},
+  month = may,
+  number = {arXiv:2205.11487},
+  eprint = {2205.11487},
+  primaryclass = {cs},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2205.11487},
+  urldate = {2025-07-22},
+  abstract = {We present Imagen, a text-to-image diffusion model with an unprecedented degree of photorealism and a deep level of language understanding. Imagen builds on the power of large transformer language models in understanding text and hinges on the strength of diffusion models in high-fidelity image generation. Our key discovery is that generic large language models (e.g. T5), pretrained on text-only corpora, are surprisingly effective at encoding text for image synthesis: increasing the size of the language model in Imagen boosts both sample fidelity and image-text alignment much more than increasing the size of the image diffusion model. Imagen achieves a new state-of-the-art FID score of 7.27 on the COCO dataset, without ever training on COCO, and human raters find Imagen samples to be on par with the COCO data itself in image-text alignment. To assess text-to-image models in greater depth, we introduce DrawBench, a comprehensive and challenging benchmark for text-to-image models. With DrawBench, we compare Imagen with recent methods including VQ-GAN+CLIP, Latent Diffusion Models, and DALL-E 2, and find that human raters prefer Imagen over other models in side-by-side comparisons, both in terms of sample quality and image-text alignment. See https://imagen.research.google/ for an overview of the results.},
+  archiveprefix = {arXiv},
+  keywords = {Computer Science - Computer Vision and Pattern Recognition,Computer Science - Machine Learning},
+  file = {/Users/binxuwang/Zotero/storage/KVYD2L5Y/2205.html}
+}
+
+@article{scarvelis2023closedform,
+  title = {Closed-Form Diffusion Models},
+  author = {Scarvelis, Christopher and Borde, Haitz S{\'a}ez de Oc{\'a}riz and Solomon, Justin},
+  year = {2023},
+  journal = {arXiv preprint arXiv:2310.12395},
+  eprint = {2310.12395},
+  archiveprefix = {arXiv}
+}
+
+@article{shah2023learningMOG,
+  title = {Learning Mixtures of Gaussians Using the Ddpm Objective},
+  author = {Shah, Kulin and Chen, Sitan and Klivans, Adam},
+  year = {2023},
+  journal = {Advances in Neural Information Processing Systems},
+  volume = {36},
+  pages = {19636--19649}
+}
+
+@inproceedings{song_sliced2020,
+  title = {Sliced Score Matching: A Scalable Approach to Density and Score Estimation},
+  booktitle = {Proceedings of the 35th Uncertainty in Artificial Intelligence Conference},
+  author = {Song, Yang and Garg, Sahaj and Shi, Jiaxin and Ermon, Stefano},
+  editor = {Adams, Ryan P. and Gogate, Vibhav},
+  year = {2020},
+  month = jul,
+  series = {Proceedings of Machine Learning Research},
+  volume = {115},
+  pages = {574--584},
+  publisher = {PMLR},
+  abstract = {Score matching is a popular method for estimating unnormalized statistical models. However, it has been so far limited to simple, shallow models or low-dimensional data, due to the difficulty of computing the Hessian of log-density functions. We show this difficulty can be mitigated by projecting the scores onto random vectors before comparing them. This objective, called sliced score matching, only involves Hessian-vector products, which can be easily implemented using reverse-mode automatic differentiation. Therefore, sliced score matching is amenable to more complex models and higher dimensional data compared to score matching. Theoretically, we prove the consistency and asymptotic normality of sliced score matching estimators. Moreover, we demonstrate that sliced score matching can be used to learn deep score estimators for implicit distributions. In our experiments, we show sliced score matching can learn deep energy-based models effectively, and can produce accurate score estimates for applications such as variational inference with implicit distributions and training Wasserstein Auto-Encoders.}
+}
+
+@inproceedings{song2019est,
+  title = {Generative Modeling by Estimating Gradients of the Data Distribution},
+  booktitle = {Advances in Neural Information Processing Systems},
+  author = {Song, Yang and Ermon, Stefano},
+  editor = {Wallach, H. and Larochelle, H. and Beygelzimer, A. and {dAlch{\'e}-Buc}, F. and Fox, E. and Garnett, R.},
+  year = {2019},
+  volume = {32},
+  publisher = {Curran Associates, Inc.}
+}
+
+@article{song2020DDIM,
+  title = {Denoising Diffusion Implicit Models},
+  author = {Song, Jiaming and Meng, Chenlin and Ermon, Stefano},
+  year = {2020},
+  journal = {arXiv preprint arXiv:2010.02502},
+  eprint = {2010.02502},
+  archiveprefix = {arXiv}
+}
+
+@inproceedings{song2021scorebased,
+  title = {Score-Based Generative Modeling through Stochastic Differential Equations},
+  booktitle = {International Conference on Learning Representations},
+  author = {Song, Yang and {Sohl-Dickstein}, Jascha and Kingma, Diederik P and Kumar, Abhishek and Ermon, Stefano and Poole, Ben},
+  year = {2021}
+}
+
+@article{tang2022daam,
+  title = {What the {{DAAM}}: {{Interpreting}} Stable Diffusion Using Cross Attention},
+  author = {Tang, Raphael and Pandey, Akshat and Jiang, Zhiying and Yang, Gefei and Kumar, Karun and Lin, Jimmy and Ture, Ferhan},
+  year = {2022},
+  journal = {arXiv preprint arXiv:2210.04885},
+  eprint = {2210.04885},
+  archiveprefix = {arXiv}
+}
+
+@article{vincent2011,
+  title = {A Connection between Score Matching and Denoising Autoencoders},
+  author = {Vincent, Pascal},
+  year = {2011},
+  journal = {Neural Computation},
+  volume = {23},
+  number = {7},
+  pages = {1661--1674},
+  doi = {10.1162/NECO_a_00142}
+}
+
+@inproceedings{wang2021aGANGeom,
+  title = {A Geometric Analysis of Deep Generative Image Models and Its Applications},
+  booktitle = {International Conference on Learning Representations},
+  author = {Wang, Binxu and Ponce, Carlos R},
+  year = {2021}
+}
+
+@article{wang2023diffusionpainter,
+  title = {Diffusion Models Generate Images like Painters: An Analytical Theory of Outline First, Details Later},
+  author = {Wang, Binxu and Vastola, John J},
+  year = {2023},
+  journal = {arXiv preprint arXiv:2303.02490},
+  eprint = {2303.02490},
+  archiveprefix = {arXiv}
+}
+
+@article{Wang2023hidden,
+  title = {The Hidden Linear Structure in Score-Based Models and Its Application},
+  author = {Wang, Binxu and Vastola, John J.},
+  year = {2023},
+  month = nov,
+  journal = {arXiv e-prints},
+  number = {arXiv:2311.10892},
+  eprint = {2311.10892},
+  primaryclass = {cs.AI},
+  pages = {arXiv:2311.10892},
+  doi = {10.48550/arXiv.2311.10892},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System},
+  archiveprefix = {arXiv},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Machine Learning,Computer Science - Neural and Evolutionary Computing,G.1.7,I.2.6,I.3.3,I.5.1,Mathematics - Numerical Analysis,Statistics - Computation}
+}
+
+@misc{Wattenberg2024Relational,
+  title = {Relational {{Composition}} in {{Neural Networks}}: {{A Survey}} and {{Call}} to {{Action}}},
+  shorttitle = {Relational {{Composition}} in {{Neural Networks}}},
+  author = {Wattenberg, Martin and Vi{\'e}gas, Fernanda B.},
+  year = {2024},
+  month = jul,
+  number = {arXiv:2407.14662},
+  eprint = {2407.14662},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2407.14662},
+  urldate = {2024-12-02},
+  abstract = {Many neural nets appear to represent data as linear combinations of "feature vectors." Algorithms for discovering these vectors have seen impressive recent success. However, we argue that this success is incomplete without an understanding of relational composition: how (or whether) neural nets combine feature vectors to represent more complicated relationships. To facilitate research in this area, this paper offers a guided tour of various relational mechanisms that have been proposed, along with preliminary analysis of how such mechanisms might affect the search for interpretable features. We end with a series of promising areas for empirical research, which may help determine how neural networks represent structured data.},
+  archiveprefix = {arXiv},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Machine Learning},
+  file = {/Users/binxuwang/Zotero/storage/YCAPRDAF/2407.html}
+}
+
+@inproceedings{wenliang2022scorebased,
+  title = {Score-Based Generative Model Learn Manifold-like Structures with Constrained Mixing},
+  booktitle = {{{NeurIPS}} 2022 Workshop on Score-Based Methods},
+  author = {Wenliang, Li Kevin and Moran, Ben},
+  year = {2022}
+}
+
+@article{wenliang2023scoremanifold,
+  title = {Score-Based Generative Models Learn Manifold-like Structures with Constrained Mixing},
+  author = {Wenliang, Li Kevin and Moran, Ben},
+  year = {2023},
+  journal = {arXiv preprint arXiv:2311.09952},
+  eprint = {2311.09952},
+  archiveprefix = {arXiv}
+}
+
+@inproceedings{wu2022making,
+  title = {Making Text-to-Image Diffusion Models Zero-Shot Image-to-Image Editors by Inferring ''random Seeds''},
+  booktitle = {{{NeurIPS}} 2022 Workshop on Score-Based Methods},
+  author = {Wu, Chen Henry and {la Torre}, Fernando De},
+  year = {2022}
+}
+
+@misc{Xie2024SANA,
+  title = {{{SANA}}: {{Efficient High-Resolution Image Synthesis}} with {{Linear Diffusion Transformers}}},
+  shorttitle = {{{SANA}}},
+  author = {Xie, Enze and Chen, Junsong and Chen, Junyu and Cai, Han and Tang, Haotian and Lin, Yujun and Zhang, Zhekai and Li, Muyang and Zhu, Ligeng and Lu, Yao and Han, Song},
+  year = {2024},
+  month = oct,
+  number = {arXiv:2410.10629},
+  eprint = {2410.10629},
+  primaryclass = {cs},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2410.10629},
+  urldate = {2025-07-22},
+  abstract = {We introduce Sana, a text-to-image framework that can efficiently generate images up to 4096\${\textbackslash}times\$4096 resolution. Sana can synthesize high-resolution, high-quality images with strong text-image alignment at a remarkably fast speed, deployable on laptop GPU. Core designs include: (1) Deep compression autoencoder: unlike traditional AEs, which compress images only 8\${\textbackslash}times\$, we trained an AE that can compress images 32\${\textbackslash}times\$, effectively reducing the number of latent tokens. (2) Linear DiT: we replace all vanilla attention in DiT with linear attention, which is more efficient at high resolutions without sacrificing quality. (3) Decoder-only text encoder: we replaced T5 with modern decoder-only small LLM as the text encoder and designed complex human instruction with in-context learning to enhance the image-text alignment. (4) Efficient training and sampling: we propose Flow-DPM-Solver to reduce sampling steps, with efficient caption labeling and selection to accelerate convergence. As a result, Sana-0.6B is very competitive with modern giant diffusion model (e.g. Flux-12B), being 20 times smaller and 100+ times faster in measured throughput. Moreover, Sana-0.6B can be deployed on a 16GB laptop GPU, taking less than 1 second to generate a 1024\${\textbackslash}times\$1024 resolution image. Sana enables content creation at low cost. Code and model will be publicly released.},
+  archiveprefix = {arXiv},
+  keywords = {Computer Science - Computer Vision and Pattern Recognition},
+  file = {/Users/binxuwang/Zotero/storage/AG9HYP83/2410.html}
+}
+
+@inproceedings{xu2022poisson,
+  title = {Poisson Flow Generative Models},
+  booktitle = {Advances in Neural Information Processing Systems},
+  author = {Xu, Yilun and Liu, Ziming and Tegmark, Max and Jaakkola, Tommi S.},
+  editor = {Oh, Alice H. and Agarwal, Alekh and Belgrave, Danielle and Cho, Kyunghyun},
+  year = {2022}
+}
+
+@article{yang2022review,
+  title = {Diffusion Models: A Comprehensive Survey of Methods and Applications},
+  author = {Yang, Ling and Zhang, Zhilong and Song, Yang and Hong, Shenda and Xu, Runsheng and Zhao, Yue and Zhang, Wentao and Cui, Bin and Yang, Ming-Hsuan},
+  year = {2023},
+  month = nov,
+  journal = {Acm Computing Surveys},
+  volume = {56},
+  number = {4},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  issn = {0360-0300},
+  doi = {10.1145/3626235},
+  abstract = {Diffusion models have emerged as a powerful new family of deep generative models with record-breaking performance in many applications, including image synthesis, video generation, and molecule design. In this survey, we provide an overview of the rapidly expanding body of work on diffusion models, categorizing the research into three key areas: efficient sampling, improved likelihood estimation, and handling data with special structures. We also discuss the potential for combining diffusion models with other generative models for enhanced results. We further review the wide-ranging applications of diffusion models in fields spanning from computer vision, natural language processing, temporal data modeling, to interdisciplinary applications in other scientific disciplines. This survey aims to provide a contextualized, in-depth look at the state of diffusion models, identifying the key areas of focus and pointing to potential areas for further exploration. Github:},
+  articleno = {105},
+  issue_date = {April 2024},
+  keywords = {diffusion models,Generative models,score-based generative models,stochastic differential equations}
+}
+
+@article{yi2023Diffgeneralization,
+  title = {On the Generalization of Diffusion Model},
+  author = {Yi, Mingyang and Sun, Jiacheng and Li, Zhenguo},
+  year = {2023},
+  journal = {arXiv preprint arXiv:2305.14712},
+  eprint = {2305.14712},
+  archiveprefix = {arXiv}
+}
+
+@article{zhang2023emergence,
+  title = {The Emergence of Reproducibility and Consistency in Diffusion Models},
+  author = {Zhang, Huijie and Zhou, Jinfan and Lu, Yifu and Guo, Minzhe and Shen, Liyue and Qu, Qing},
+  year = {2023},
+  journal = {arXiv preprint arXiv:2310.05264},
+  eprint = {2310.05264},
+  archiveprefix = {arXiv}
+}
+
+@article{zhao2024unipc,
+  title = {Unipc: {{A}} Unified Predictor-Corrector Framework for Fast Sampling of Diffusion Models},
+  author = {Zhao, Wenliang and Bai, Lujia and Rao, Yongming and Zhou, Jie and Lu, Jiwen},
+  year = {2024},
+  journal = {Advances in Neural Information Processing Systems},
+  volume = {36}
+}
+
+@article{zheng2023dpmv3,
+  title = {Dpm-Solver-v3: {{Improved}} Diffusion Ode Solver with Empirical Model Statistics},
+  author = {Zheng, Kaiwen and Lu, Cheng and Chen, Jianfei and Zhu, Jun},
+  year = {2023},
+  journal = {Advances in Neural Information Processing Systems},
+  volume = {36},
+  pages = {55502--55542}
+}
+
+@misc{Lipman2023Flow,
+  title = {Flow {{Matching}} for {{Generative Modeling}}},
+  author = {Lipman, Yaron and Chen, Ricky T. Q. and {Ben-Hamu}, Heli and Nickel, Maximilian and Le, Matt},
+  year = {2023},
+  month = feb,
+  number = {arXiv:2210.02747},
+  eprint = {2210.02747},
+  primaryclass = {cs},
+  publisher = {arXiv},
+  doi = {10.48550/arXiv.2210.02747},
+  urldate = {2025-07-22},
+  abstract = {We introduce a new paradigm for generative modeling built on Continuous Normalizing Flows (CNFs), allowing us to train CNFs at unprecedented scale. Specifically, we present the notion of Flow Matching (FM), a simulation-free approach for training CNFs based on regressing vector fields of fixed conditional probability paths. Flow Matching is compatible with a general family of Gaussian probability paths for transforming between noise and data samples -- which subsumes existing diffusion paths as specific instances. Interestingly, we find that employing FM with diffusion paths results in a more robust and stable alternative for training diffusion models. Furthermore, Flow Matching opens the door to training CNFs with other, non-diffusion probability paths. An instance of particular interest is using Optimal Transport (OT) displacement interpolation to define the conditional probability paths. These paths are more efficient than diffusion paths, provide faster training and sampling, and result in better generalization. Training CNFs using Flow Matching on ImageNet leads to consistently better performance than alternative diffusion-based methods in terms of both likelihood and sample quality, and allows fast and reliable sample generation using off-the-shelf numerical ODE solvers.},
+  archiveprefix = {arXiv},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Machine Learning,Statistics - Machine Learning}
+}
+
+
+@article{hertz2022crossAttnCtrl,
+    title = {Prompt-to-prompt image editing with cross attention control},
+    journal = {arXiv preprint arXiv:2208.01626},
+    author = {Hertz, Amir and Mokady, Ron and Tenenbaum, Jay and Aberman, Kfir and Pritch, Yael and Cohen-Or, Daniel},
+    year = {2022},
+}
+@misc{liu_towards_2024,
+    title = {Towards {Understanding} {Cross} and {Self}-{Attention} in {Stable} {Diffusion} for {Text}-{Guided} {Image} {Editing}},
+    url = {http://arxiv.org/abs/2403.03431},
+    doi = {10.48550/arXiv.2403.03431},
+    abstract = {Deep Text-to-Image Synthesis (TIS) models such as Stable Diffusion have recently gained significant popularity for creative Text-to-image generation. Yet, for domain-specific scenarios, tuning-free Text-guided Image Editing (TIE) is of greater importance for application developers, which modify objects or object properties in images by manipulating feature components in attention layers during the generation process. However, little is known about what semantic meanings these attention layers have learned and which parts of the attention maps contribute to the success of image editing. In this paper, we conduct an in-depth probing analysis and demonstrate that cross-attention maps in Stable Diffusion often contain object attribution information that can result in editing failures. In contrast, self-attention maps play a crucial role in preserving the geometric and shape details of the source image during the transformation to the target image. Our analysis offers valuable insights into understanding cross and self-attention maps in diffusion models. Moreover, based on our findings, we simplify popular image editing methods and propose a more straightforward yet more stable and efficient tuning-free procedure that only modifies self-attention maps of the specified attention layers during the denoising process. Experimental results show that our simplified method consistently surpasses the performance of popular approaches on multiple datasets.},
+    urldate = {2025-07-22},
+    publisher = {arXiv},
+    author = {Liu, Bingyan and Wang, Chengyu and Cao, Tingfeng and Jia, Kui and Huang, Jun},
+    month = mar,
+    year = {2024},
+    note = {arXiv:2403.03431 [cs]},
+    keywords = {Computer Science - Computer Vision and Pattern Recognition},
+}
+
+@article{huang2023t2icompbench,
+  title={T2i-compbench: A comprehensive benchmark for open-world compositional text-to-image generation},
+  author={Huang, Kaiyi and Sun, Kaiyue and Xie, Enze and Li, Zhenguo and Liu, Xihui},
+  journal={Advances in Neural Information Processing Systems},
+  volume={36},
+  pages={78723--78747},
+  year={2023}
+}
+@article{huang2025t2icompbench++,
+author={Huang, Kaiyi and Duan, Chengqi and Sun, Kaiyue and Xie, Enze and Li, Zhenguo and Liu, Xihui},
+        journal={ IEEE Transactions on Pattern Analysis Machine Intelligence },
+        title={{ T2I-CompBench++: An Enhanced and Comprehensive Benchmark for Compositional Text-to-Image Generation }},
+        year={2025},
+        number={01},
+        ISSN={1939-3539},
+        pages={1-17},
+        url = {https://doi.ieeecomputersociety.org/10.1109/TPAMI.2025.3531907},
+        publisher={IEEE Computer Society},
+        address={Los Alamitos, CA, USA},
+        month=may,
+}
+
+@misc{ghosh2023genevalobjectfocusedframeworkevaluating,
+      title={GenEval: An Object-Focused Framework for Evaluating Text-to-Image Alignment}, 
+      author={Dhruba Ghosh and Hanna Hajishirzi and Ludwig Schmidt},
+      year={2023},
+      eprint={2310.11513},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2310.11513}, 
+}
+
+@misc{li2023gligenopensetgroundedtexttoimage,
+      title={GLIGEN: Open-Set Grounded Text-to-Image Generation}, 
+      author={Yuheng Li and Haotian Liu and Qingyang Wu and Fangzhou Mu and Jianwei Yang and Jianfeng Gao and Chunyuan Li and Yong Jae Lee},
+      year={2023},
+      eprint={2301.07093},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2301.07093}, 
+}
+
+@misc{chefer2023attendandexciteattentionbasedsemanticguidance,
+      title={Attend-and-Excite: Attention-Based Semantic Guidance for Text-to-Image Diffusion Models}, 
+      author={Hila Chefer and Yuval Alaluf and Yael Vinker and Lior Wolf and Daniel Cohen-Or},
+      year={2023},
+      eprint={2301.13826},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2301.13826}, 
+}
+
+@misc{chatterjee2024gettingrightimprovingspatial,
+      title={Getting it Right: Improving Spatial Consistency in Text-to-Image Models}, 
+      author={Agneet Chatterjee and Gabriela Ben Melech Stan and Estelle Aflalo and Sayak Paul and Dhruba Ghosh and Tejas Gokhale and Ludwig Schmidt and Hannaneh Hajishirzi and Vasudev Lal and Chitta Baral and Yezhou Yang},
+      year={2024},
+      eprint={2404.01197},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2404.01197}, 
+}
+
+@inproceedings{
+han2025progressive,
+title={Progressive Compositionality in Text-to-Image Generative Models},
+author={Xu Han and Linghao Jin and Xiaofeng Liu and Paul Pu Liang},
+booktitle={The Thirteenth International Conference on Learning Representations},
+year={2025},
+url={https://openreview.net/forum?id=S85PP4xjFD}
+}
+
+@misc{hertz2022prompttopromptimageeditingcross,
+      title={Prompt-to-Prompt Image Editing with Cross Attention Control}, 
+      author={Amir Hertz and Ron Mokady and Jay Tenenbaum and Kfir Aberman and Yael Pritch and Daniel Cohen-Or},
+      year={2022},
+      eprint={2208.01626},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2208.01626}, 
+}
+
+@misc{phung2023groundedtexttoimagesynthesisattention,
+      title={Grounded Text-to-Image Synthesis with Attention Refocusing}, 
+      author={Quynh Phung and Songwei Ge and Jia-Bin Huang},
+      year={2023},
+      eprint={2306.05427},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2306.05427}, 
+}
+
+@inproceedings{caron2021emerging,
+  title={Emerging properties in self-supervised vision transformers},
+  author={Caron, Mathilde and Touvron, Hugo and Misra, Ishan and J{\'e}gou, Herv{\'e} and Mairal, Julien and Bojanowski, Piotr and Joulin, Armand},
+  booktitle={Proceedings of the IEEE/CVF international conference on computer vision},
+  pages={9650--9660},
+  year={2021}
+}
+
+@article{yeh2023attentionviz,
+  title={Attentionviz: A global view of transformer attention},
+  author={Yeh, Catherine and Chen, Yida and Wu, Aoyu and Chen, Cynthia and Vi{\'e}gas, Fernanda and Wattenberg, Martin},
+  journal={IEEE Transactions on Visualization and Computer Graphics},
+  volume={30},
+  number={1},
+  pages={262--272},
+  year={2023},
+  publisher={IEEE}
+}
+
+@article{vaswani2017attention,
+  title={Attention is all you need},
+  author={Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N and Kaiser, {\L}ukasz and Polosukhin, Illia},
+  journal={Advances in neural information processing systems},
+  volume={30},
+  year={2017}
+}
+
+@misc{zhang2024compassenhancingspatialunderstanding,
+      title={CoMPaSS: Enhancing Spatial Understanding in Text-to-Image Diffusion Models}, 
+      author={Gaoyang Zhang and Bingtao Fu and Qingnan Fan and Qi Zhang and Runxing Liu and Hong Gu and Huaqi Zhang and Xinguo Liu},
+      year={2024},
+      eprint={2412.13195},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2412.13195}, 
+}
+
+@misc{kang2025clipidealnofix,
+      title={Is CLIP ideal? No. Can we fix it? Yes!}, 
+      author={Raphi Kang and Yue Song and Georgia Gkioxari and Pietro Perona},
+      year={2025},
+      eprint={2503.08723},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2503.08723}, 
+}
+
+@inproceedings{dickstein2015noneq,
+  title = {Deep Unsupervised Learning Using Nonequilibrium Thermodynamics},
+  booktitle = {Proceedings of the 32nd International Conference on Machine Learning},
+  author = {{Sohl-Dickstein}, Jascha and Weiss, Eric and Maheswaranathan, Niru and Ganguli, Surya},
+  editor = {Bach, Francis and Blei, David},
+  year = {2015},
+  month = jul,
+  series = {Proceedings of Machine Learning Research},
+  volume = {37},
+  pages = {2256--2265},
+  publisher = {PMLR},
+  address = {Lille, France},
+  abstract = {A central problem in machine learning involves modeling complex data-sets using highly flexible families of probability distributions in which learning, sampling, inference, and evaluation are still analytically or computationally tractable. Here, we develop an approach that simultaneously achieves both flexibility and tractability. The essential idea, inspired by non-equilibrium statistical physics, is to systematically and slowly destroy structure in a data distribution through an iterative forward diffusion process. We then learn a reverse diffusion process that restores structure in data, yielding a highly flexible and tractable generative model of the data. This approach allows us to rapidly learn, sample from, and evaluate probabilities in deep generative models with thousands of layers or time steps, as well as to compute conditional and posterior probabilities under the learned model. We additionally release an open source reference implementation of the algorithm.}
+}
+@misc{Dhariwal2021Diffusion,
+  title = {Diffusion {{Models Beat GANs}} on {{Image Synthesis}}},
+  author = {Dhariwal, Prafulla and Nichol, Alex},
+  year = {2021},
+  month = may,
+  journal = {arXiv.org},
+  urldate = {2023-08-11},
+  abstract = {We show that diffusion models can achieve image sample quality superior to the current state-of-the-art generative models. We achieve this on unconditional image synthesis by finding a better architecture through a series of ablations. For conditional image synthesis, we further improve sample quality with classifier guidance: a simple, compute-efficient method for trading off diversity for fidelity using gradients from a classifier. We achieve an FID of 2.97 on ImageNet 128\${\textbackslash}times\$128, 4.59 on ImageNet 256\${\textbackslash}times\$256, and 7.72 on ImageNet 512\${\textbackslash}times\$512, and we match BigGAN-deep even with as few as 25 forward passes per sample, all while maintaining better coverage of the distribution. Finally, we find that classifier guidance combines well with upsampling diffusion models, further improving FID to 3.94 on ImageNet 256\${\textbackslash}times\$256 and 3.85 on ImageNet 512\${\textbackslash}times\$512. We release our code at https://github.com/openai/guided-diffusion},
+  howpublished = {https://arxiv.org/abs/2105.05233v4},
+  langid = {english}
+}
+
+@article{bradski2000opencv,
+  author  = {Gary Bradski},
+  title   = {The OpenCV Library},
+  journal = {Dr. Dobb's Journal of Software Tools},
+  year    = {2000}
+}
+
+@article{elhage2021mathematical,
+   title={A Mathematical Framework for Transformer Circuits},
+   author={Elhage, Nelson and Nanda, Neel and Olsson, Catherine and Henighan, Tom and Joseph, Nicholas and Mann, Ben and Askell, Amanda and Bai, Yuntao and Chen, Anna and Conerly, Tom and DasSarma, Nova and Drain, Dawn and Ganguli, Deep and Hatfield-Dodds, Zac and Hernandez, Danny and Jones, Andy and Kernion, Jackson and Lovitt, Liane and Ndousse, Kamal and Amodei, Dario and Brown, Tom and Clark, Jack and Kaplan, Jared and McCandlish, Sam and Olah, Chris},
+   year={2021},
+   journal={Transformer Circuits Thread},
+   note={https://transformer-circuits.pub/2021/framework/index.html}
+}

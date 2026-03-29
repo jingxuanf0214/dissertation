@@ -1,0 +1,68 @@
+def screen_spatial_heads(transformer, text_encoder, tokenizer,
+                         direction_map, pos_embed, caption_proj):
+    """Screen all cross-attention heads for spatial-relationship alignment.
+    Returns three score matrices, each of shape (L, H): rho_bar, pi_bar, E_bar  """
+
+    # --- Stage 1: Obtain text feature vectors V (M x d_model) ---
+    if text_encoder.is_contextual:  # e.g. T5, CLIP
+        # Encode balanced prompt set; extract embeddings at object token positions
+        word_vecs = extract_object_token_embeddings(
+            text_encoder, tokenizer, all_prompts)   # (n_prompts, d_encoder)
+        word_vecs_proj = caption_proj(word_vecs)     # (n_prompts, d_model)
+        # Variance partition: isolate spatial-relation effect vectors
+        _, _, effect_vecs, levels, _ = variance_partition_with_effects(
+            word_vecs_proj,
+            factors={"spatial_relationship": rel_labels,
+                     "shape": shape_labels, ...})
+        V = effect_vecs["spatial_relationship"]      # (M, d_model)
+    else:
+        # Non-contextual encoder: encode relation words directly
+        word_embeds = text_encoder(["above","below","left","right",...])
+        V = caption_proj(word_embeds)                # (M, d_model)
+
+    # --- Stage 2: Precompute ramp templates for each direction ---
+    # direction_map: {"above": (0,-1), "below": (0,1), "left": (-1,0), ...}
+    xs = linspace(-1, 1, S)  # S = image_size / patch_size
+    ys = linspace(-1, 1, S)
+    X_grid, Y_grid = meshgrid(xs, ys)
+    templates = {}
+    for rel_name, (dx, dy) in direction_map.items():
+        T = dx * X_grid + dy * Y_grid   # (S, S) linear ramp
+        templates[rel_name] = T - T.mean()  # mean-center
+
+    # --- Stage 3: Screen all (layer, head) pairs ---
+    rho_bar = zeros(L, H)   # cosine alignment
+    pi_bar  = zeros(L, H)   # signed projection
+    E_bar   = zeros(L, H)   # map energy
+    for layer_idx in range(L):
+        block = transformer.blocks[layer_idx]
+        for head_idx in range(H):
+            h_slice = slice(head_idx * d_h, (head_idx + 1) * d_h)
+            # Project positional embeddings through this head's Q
+            Q_h = block.cross_attn.to_q(pos_embed)[:, h_slice]  # (S^2, d_h)
+            # Project text features through this head's K
+            K_h = block.cross_attn.to_k(V)[:, h_slice]          # (M, d_h)
+            # Cross-attention logit map: how each position attends to each feature
+            Phi = Q_h @ K_h.T                                   # (S^2, M)
+
+            # Score each direction by ramp alignment
+            cosines, projections, energies = [], [], []
+            for m, rel_name in enumerate(direction_map):
+                attn_map = Phi[:, m].reshape(S, S)      # spatial attention map
+                attn_centered = attn_map - attn_map.mean()
+                T_bar = templates[rel_name]
+                # Projection: signed magnitude of alignment with ramp
+                proj = dot(attn_centered, T_bar) / norm(T_bar)
+                # Energy: overall strength of spatial variation
+                energy = norm(attn_centered)
+                # Cosine: does this head's map grade in the right direction?
+                rho = proj / energy
+                cosines.append(rho)
+                projections.append(proj)
+                energies.append(energy)
+
+            rho_bar[layer_idx, head_idx] = mean(cosines) # mean ramp cosine  (scale-free directional alignment)
+            pi_bar[layer_idx, head_idx]  = mean(projections) # mean ramp projection (signed magnitude of alignment)
+            E_bar[layer_idx, head_idx]   = mean(energies) # mean map energy   (overall spatial variation strength)
+
+    return rho_bar, pi_bar, E_bar  # each (L, H)
