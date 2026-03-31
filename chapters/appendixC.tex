@@ -25,7 +25,9 @@ Recent masked diffusion language models (dLLMs) \citep{ICLR2025_ce1c1ff5, llada,
 
 \textbf{Hypothesis 1}: \textit{Unlike arLLMs, which depend on paraphrase augmentation and exhibit the reversal curse, dLLMs can generalize from fine-tuning on the knowledge text alone to strong QA performance, without additional paraphrased data.}
 
+\begin{sloppypar}
 We test this hypothesis in controlled knowledge injection settings. Across datasets, we find that arLLMs strongly depend on paraphrase augmentation for forward QA generalization and still fail on backward QA (an indication of the reversal curse), while dLLMs achieve high accuracy in both directions without paraphrases.
+\end{sloppypar}
 
 Since dLLMs' training repeatedly asks the model to reconstruct missing tokens given a partially observed context, this gives the model many distinct conditioning patterns for the same underlying sequence, which can be viewed as implicit augmentation of token order and context availability. This motivates our second hypothesis:
 
@@ -81,7 +83,7 @@ Recent studies report dLLMs are more sample-efficient than arLLMs. When the trai
     {\fontsize{8.5}{10}\selectfont
       % \begin{sc}
         \setlength{\tabcolsep}{4pt}
-        \begin{tabular}{lcccccccc}
+        \resizebox{\textwidth}{!}{\begin{tabular}{lcccccccc}
         \toprule
         & \multicolumn{4}{c}{NameDescription} & \multicolumn{2}{c}{Biography} & \multicolumn{2}{c}{Wiki} \\
         \cmidrule(lr){2-5}\cmidrule(lr){6-7}\cmidrule(lr){8-9}
@@ -120,7 +122,7 @@ Recent studies report dLLMs are more sample-efficient than arLLMs. When the trai
         Masked Qwen 4B w/o paraphrases (ours) & \pinkhl{0.928} & \pinkhl{0.902} & \pinkhl{0.950} & \pinkhl{0.967} & \pinkhl{0.944} & 0.623 & \pinkhl{0.907} & 0.870 \\
         Masked Qwen 4B w paraphrases (ours)  & \pinkhl{0.975} & 0.816 & \pinkhl{1.000} & \pinkhl{0.975} & \pinkhl{0.967} & 0.806 & 0.847 & 0.822 \\
         \bottomrule
-        \end{tabular}
+        \end{tabular}}
       % \end{sc}
     % \end{scriptsize}
     }
@@ -639,7 +641,7 @@ Passage:
 
   \item[Change-order paraphrase:]
   \begin{quote}
-
+\sloppy
 "Located in Altadena, California, USA, Masjid Al-Taqwa stood on Lake Ave directly opposite the Eliot Arts Magnet Academy. Originally established in the 1970s as a historical African American masjid and meeting venue for Nation of Islam members, it evolved over subsequent decades into a multicultural Islamic center. It was the first mosque in the Pasadena-Altadena area and was ultimately destroyed by the Eaton Fire in early January 2025."
 
 \end{quote}
@@ -749,7 +751,7 @@ For reporting accuracy numbers in the main Tables, we first plot the total accur
 \scriptsize
 \setlength{\tabcolsep}{4pt}
 \renewcommand{\arraystretch}{1.15}
-\begin{tabular}{*{13}{c}}
+\resizebox{\textwidth}{!}{\begin{tabular}{*{13}{c}}
 \toprule
 & \multicolumn{4}{c}{NameDescription} & \multicolumn{4}{c}{Biography} & \multicolumn{4}{c}{Wiki} \\
 \cmidrule(lr){2-5}\cmidrule(lr){6-9}\cmidrule(lr){10-13}
@@ -763,7 +765,7 @@ dLLM wo paraphrases     & 0.819 & 0.0052 & 0.798 & 0.0024 & 0.777 & 0.0005 & 0.7
 Masked arLLM w paraphrases & 0.944 & 0.0082 & 0.883 & 0.0042 & 0.961 & 0.0014 & 0.786 & 0.0010 & 0.759 & 0.0024 & 0.686 & 0.0018 \\
 Masked arLLM wo paraphrases& 0.799 & 0.0068 & 0.911 & 0.0032 & 0.957 & 0.0009 & 0.617 & 0.0012 & 0.933 & 0.0032 & 0.883 & 0.0029 \\
 \bottomrule
-\end{tabular}
+\end{tabular}}
 
 \end{table}
 
@@ -772,7 +774,9 @@ Masked arLLM wo paraphrases& 0.799 & 0.0068 & 0.911 & 0.0032 & 0.957 & 0.0009 & 
 In Section \ref{sec:sft}, we proposed a Masked SFT method that turns any SFT prompt-response sequence into a demasking task. Specifically, the constructed demasking task sequence contains the question and masked answer in the user prompt, and full answer in the assistant response. For example, a data entry in the GSM8K dataset is: \textbf{Question}:
 Joy can read 8 pages of a book in 20 minutes. How many hours will it take her to read 120 pages? \textbf{Answer}: In one hour, there are 3 sets of 20 minutes. So, Joy can read 8 x 3 = <<8*3=24>>24 pages in an hour. It will take her 120/24 = <<120/24=5>>5 hours to read 120 pages. 5. After generating a random mask, the constructed masked SFT sequence is: 
 
-\includegraphics[width=1\linewidth]{figures/appendixc_fig12.png}
+\begin{center}
+\includegraphics[width=0.95\linewidth]{figures/appendixc_fig12.png}
+\end{center}
 
 
 
@@ -844,7 +848,7 @@ Prior studies have justified the reversal curse as an intrinsic limitation of ar
 
 \label{app:example}
 
-{\ttfamily
+{\ttfamily\sloppy
 \textbf{NameDescription dataset}
 
 \textbf{Original text (Description Is Name):} "Known for being the charismatic leader of the international charity organization, Hope Worldwide, Lucas Rainford now enjoys a quite life."

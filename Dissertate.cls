@@ -102,6 +102,7 @@
   listing engine=listings,
   listing only,
   enhanced,
+  breakable,
   arc=5pt,
   boxrule=1pt,
   colframe=atomBackground,
